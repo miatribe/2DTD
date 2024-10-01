@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbahluuy1b54i"]
+
+[ext_resource type="Script" path="res://Scripts/Tower.gd" id="1_2opwc"]
+[ext_resource type="Texture2D" uid="uid://daqpeu61np18t" path="res://Assets/TowerBase.png" id="1_fyoes"]
+[ext_resource type="PackedScene" uid="uid://bxc6n47ompw53" path="res://Scenes/projectile.tscn" id="2_qbdxw"]
+
+[node name="Tower" type="Node2D"]
+script = ExtResource("1_2opwc")
+projectile = ExtResource("2_qbdxw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_fyoes")
+
+[node name="AttackTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
