@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bclw0yf86uw3v"]
+[gd_scene load_steps=14 format=4 uid="uid://bclw0yf86uw3v"]
 
 [ext_resource type="Texture2D" uid="uid://ocaqksjjhwse" path="res://Assets/Tiles.png" id="1_me5q6"]
 [ext_resource type="Script" path="res://Scripts/TowerDefence.gd" id="2_271s4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3tfkb4p50wpy" path="res://Scenes/creeper.tscn" id="5_tdr21"]
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="6_drfic"]
 [ext_resource type="Texture2D" uid="uid://bg2dklhh7vil5" path="res://Assets/Click.png" id="7_2686v"]
+[ext_resource type="Texture2D" uid="uid://dulj6droxxvd8" path="res://Assets/Heart.png" id="7_l1e7k"]
 [ext_resource type="Texture2D" uid="uid://b6nn5i5s8usj" path="res://Assets/EmptyTile.tres" id="8_iqdoq"]
 [ext_resource type="Texture2D" uid="uid://daqpeu61np18t" path="res://Assets/TowerBase.png" id="9_i5fta"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="10_0dwem"]
@@ -78,6 +79,42 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "2D TD"
 horizontal_alignment = 1
+
+[node name="Lives" type="HBoxContainer" parent="UI/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="H1" type="TextureRect" parent="UI/VBoxContainer/Lives"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("7_l1e7k")
+stretch_mode = 3
+flip_h = true
+
+[node name="H2" type="TextureRect" parent="UI/VBoxContainer/Lives"]
+layout_mode = 2
+texture = ExtResource("7_l1e7k")
+stretch_mode = 3
+flip_h = true
+
+[node name="H3" type="TextureRect" parent="UI/VBoxContainer/Lives"]
+layout_mode = 2
+texture = ExtResource("7_l1e7k")
+stretch_mode = 3
+flip_h = true
+
+[node name="H4" type="TextureRect" parent="UI/VBoxContainer/Lives"]
+layout_mode = 2
+texture = ExtResource("7_l1e7k")
+stretch_mode = 3
+flip_h = true
+
+[node name="H5" type="TextureRect" parent="UI/VBoxContainer/Lives"]
+layout_mode = 2
+texture = ExtResource("7_l1e7k")
+stretch_mode = 3
+flip_h = true
 
 [node name="Kills" type="Label" parent="UI/VBoxContainer"]
 texture_filter = 1
