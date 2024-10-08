@@ -13,14 +13,26 @@ var lives:int = 5:
 	set(lives_in):
 		lives = lives_in
 		ui.update_lives(lives)
+		if lives <= 0:
+			gameOver = true
+			get_tree().paused = true
+			EventBus.GameOver.emit()
+var gameOver:bool = false
+
 @onready var ui: Node2D = $"../UI"
 
 
 func _ready() -> void:
 	EventBus.CreepDied.connect(creep_died)
 	EventBus.TargetReached.connect(player_damaged)
+	ui.update_gold(gold)
+	ui.update_kills(kills)
+	ui.update_lives(lives)
+
 
 func _input(event: InputEvent) -> void:
+	if gameOver:
+		return
 	if event.is_action_pressed("click") && gold >= td.tower_cost:
 		if td.block_cell(td.tile_map.get_global_mouse_position()):
 			gold-= td.tower_cost
