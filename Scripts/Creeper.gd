@@ -1,11 +1,13 @@
 class_name Creeper extends Node2D 
 
+
 @export
 var health:int = 2: 
 	set(hp_in):
 		health = hp_in
 		if(health) <= 0:
 			EventBus.CreepDied.emit(gold_value)
+			SfxSpawner.play_sound("res://Assets/creep_death.wav")
 			queue_free()
 var td: TowerDefence
 var current_path: Array[Vector2i]
