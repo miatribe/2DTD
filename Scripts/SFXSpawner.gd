@@ -7,6 +7,7 @@ var queue = []
 
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	for i in num_audio_players:
 		var audio_player = AudioStreamPlayer.new()
 		add_child(audio_player)
