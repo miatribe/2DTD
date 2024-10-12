@@ -11,6 +11,8 @@ var kills:int = 0:
 		ui.update_kills(kills)
 var lives:int = 5:
 	set(lives_in):
+		if lives_in < lives :
+			SfxSpawner.play_sound("res://Assets/player_damage.wav")
 		lives = lives_in
 		ui.update_lives(lives)
 		if lives <= 0:
