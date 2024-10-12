@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="2DTD"
-run/main_scene="res://Scenes/Level.tscn"
+run/main_scene="res://Scenes/level.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/TempCreep.png"
+
+[audio]
+
+buses/default_bus_layout="res://Scenes/audio_bus.tres"
 
 [autoload]
 
 EventBus="*res://Scripts/EventBus.gd"
+SfxSpawner="*res://Scripts/SFXSpawner.gd"
 
 [display]
 
