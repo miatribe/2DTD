@@ -22,7 +22,7 @@ buses/default_bus_layout="res://Scenes/audio_bus.tres"
 [autoload]
 
 EventBus="*res://Scripts/EventBus.gd"
-SfxSpawner="*res://Scripts/SFXSpawner.gd"
+AudioManager="*res://Scripts/AudioManager.gd"
 
 [display]
 

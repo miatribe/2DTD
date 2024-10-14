@@ -16,7 +16,7 @@ var creepers_spawned: int = 0
 func _ready() -> void:
 	spawn_location = spawn_pos.global_position
 	target_location = target_pos.global_position
-	
+
 
 func _on_spawn_timer_timeout() -> void:
 	var newcreeper = creeper.instantiate()
