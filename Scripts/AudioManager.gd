@@ -1,19 +1,24 @@
 extends Node
 
+var background_music = preload("res://Assets/music_or_sometihng.wav")
 var num_audio_players = 16
-var audio_bus = "Sfx"
 var available = []
 var queue = []
 
-
+ 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	var music_player = AudioStreamPlayer.new()
+	add_child(music_player)
+	music_player.bus = "Music"
+	music_player.stream = background_music
+	music_player.play()
 	for i in num_audio_players:
 		var audio_player = AudioStreamPlayer.new()
 		add_child(audio_player)
 		available.append(audio_player)
 		audio_player.finished.connect(_on_stream_finished.bind(audio_player))
-		audio_player.bus = audio_bus
+		audio_player.bus = "Sfx"
 
 
 func _process(delta: float) -> void:
