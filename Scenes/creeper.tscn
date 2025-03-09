@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3tfkb4p50wpy"]
 
 [ext_resource type="Texture2D" uid="uid://dt4gh0xo3lrl2" path="res://Assets/TempCreep.png" id="1_j8vob"]
-[ext_resource type="Script" path="res://Scripts/Creeper.gd" id="1_s7wb0"]
+[ext_resource type="Script" uid="uid://dau5uda4hm5ng" path="res://Scripts/Creeper.gd" id="1_s7wb0"]
 
 [node name="Creeper" type="Node2D" groups=["Creeper"]]
 script = ExtResource("1_s7wb0")
